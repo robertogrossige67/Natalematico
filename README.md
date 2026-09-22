@@ -63,8 +63,8 @@ The current software uses the following GPIO assignments:
 | Relay 3  | 25 |
 | Relay 4  | 26 |
 | Audio / PWM | 27 |
-| OLED SDA | I2C configuration |
-| OLED SCL | I2C configuration |
+| OLED SDA | 0 |
+| OLED SCL | 4 |
 
 Check `main.py` before wiring the hardware, as pin assignments may change between versions.
 
