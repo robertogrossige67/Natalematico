@@ -102,14 +102,19 @@ Do **not** publish your personal Wi-Fi SSID or password when sharing modified ve
 
 The Access Point password should also be changed from the example/default value before normal use.
 
-##  Music and Lights
+## Music and Lights
 
 The melodies are generated directly by the ESP32.
 
 Notes and timing information are stored in the program and the relay sequences are synchronized with the music.
 
+main.py uses standard relay logic, where the selected light channels turn ON with the music.
+main_inverse.py uses inverted lighting logic, where the selected channels turn OFF while the other channels remain ON, producing a complementary lighting effect.
+
 The relays are intentionally operated at relatively slow rates because conventional mechanical relays are not suitable for rapid switching.
+
 Relay timing note: The lighting sequence uses software-inverted relay logic to accommodate the startup delay of some LED Christmas-light power supplies.
+
 The physical outputs remain normally open, ensuring that all lights stay OFF when NataleMatico is stopped or outside the programmed timer period.
 
 NataleMatico is intended to produce simple rhythmic Christmas-light effects rather than high-speed lighting animation.
